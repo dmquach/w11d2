@@ -6,8 +6,11 @@ import { useTheme } from '../../context/ThemeContext';
 import LightSwitch from './LightSwitch';
 import ClimateStats from './ClimateStats';
 
+import { useClimate } from '../../context/ClimateContext';
+import { useEffect } from 'react';
+
 function Greenhouse() {
-  const { themeName } = useTheme()
+  const {themeName} = useTheme()
 
   return (themeName === "day") ? (
     <section>
